@@ -45,21 +45,4 @@ public class QueueViaStacks<E> implements Queue<E> {
 
         return stack2.pop();
     }
-
-    public static void main(String[] args) {
-        QueueViaStacks<Integer> queue = new QueueViaStacks<>();
-
-        queue.offer(6);
-        queue.offer(8);
-        queue.offer(10);
-        queue.offer(12);
-        System.out.println(queue.poll());
-        queue.offer(3);
-        System.out.println(queue.poll());
-        queue.offer(4);
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-    }
 }
