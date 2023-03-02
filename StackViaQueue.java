@@ -12,8 +12,12 @@ public class StackViaQueue<E> implements Stack<E> {
 
     public E pop() {
         // TODO
-        for (int i = 0; i < queue.size() - 1; i++) {
-            queue.offer(queue.poll());
+        if (queue.size() != 0) {
+            for (int i = 0; i < queue.size() - 1; i++) {
+                queue.offer(queue.poll());
+            }
+        } else {
+            return null;
         }
 
         return queue.poll();
